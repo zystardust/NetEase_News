@@ -9,5 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface ChannelModel : NSObject
+@property(copy,nonatomic)NSString *tname;
+@property(copy,nonatomic)NSString *tid;
 
++(NSArray *)GetChannel;
 @end

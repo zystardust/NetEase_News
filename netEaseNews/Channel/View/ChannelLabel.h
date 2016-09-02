@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ChannelLabel : UIScrollView
+@interface ChannelLabel : UILabel
 
 @end

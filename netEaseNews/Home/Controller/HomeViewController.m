@@ -7,7 +7,7 @@
 //
 
 #import "HomeViewController.h"
-
+#import "ChannelModel.h"
 @interface HomeViewController ()
 
 @end
@@ -16,7 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    NSArray *channelArr = [ChannelModel GetChannel];
+    NSLog(@"%@",channelArr);
 }
 
 - (void)didReceiveMemoryWarning {
