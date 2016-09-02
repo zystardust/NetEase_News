@@ -59,6 +59,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="网易新闻" id="Fy8-7o-uhD"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="channelScrollView" destination="Lbp-qx-hbE" id="VRJ-Qb-Y0N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

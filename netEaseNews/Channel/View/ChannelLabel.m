@@ -7,9 +7,16 @@
 //
 
 #import "ChannelLabel.h"
-
+#import "CZAdditions.h"
 @implementation ChannelLabel
-
+-(instancetype)initWithFrame:(CGRect)frame{
+    if (self = [super initWithFrame:frame]) {
+        self.textAlignment = NSTextAlignmentCenter;
+        self.font = [UIFont systemFontOfSize:16];
+        self.backgroundColor = [UIColor cz_randomColor];
+    }
+    return self;
+}
 
 
 @end
