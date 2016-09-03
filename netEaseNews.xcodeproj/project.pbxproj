@@ -32,6 +32,7 @@
 		2AD944C01D7A5DD200113877 /* NewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AD944BF1D7A5DD200113877 /* NewsTableViewController.m */; };
 		2AD944C21D7A5DE800113877 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AD944C11D7A5DE800113877 /* News.storyboard */; };
 		2AD944C51D7A600400113877 /* HomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AD944C41D7A600400113877 /* HomeCollectionViewCell.m */; };
+		2AD944C91D7A692B00113877 /* NetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AD944C81D7A692B00113877 /* NetworkTool.m */; };
 		D5866AED465F6A6095802B9E /* libPods-netEaseNews.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D73A65D1D82A9E56CD59E110 /* libPods-netEaseNews.a */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +84,8 @@
 		2AD944C11D7A5DE800113877 /* News.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
 		2AD944C31D7A600400113877 /* HomeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCollectionViewCell.h; sourceTree = "<group>"; };
 		2AD944C41D7A600400113877 /* HomeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCollectionViewCell.m; sourceTree = "<group>"; };
+		2AD944C71D7A692B00113877 /* NetworkTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkTool.h; sourceTree = "<group>"; };
+		2AD944C81D7A692B00113877 /* NetworkTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkTool.m; sourceTree = "<group>"; };
 		AF2C5531F8C6057FAD4FFD77 /* Pods-netEaseNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-netEaseNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-netEaseNews/Pods-netEaseNews.release.xcconfig"; sourceTree = "<group>"; };
 		D73A65D1D82A9E56CD59E110 /* libPods-netEaseNews.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-netEaseNews.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8320015C3D2A1A3D607884D /* Pods-netEaseNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-netEaseNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-netEaseNews/Pods-netEaseNews.debug.xcconfig"; sourceTree = "<group>"; };
@@ -255,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				2A80D2AD1D7914DC00FAE373 /* Additions */,
+				2AD944C61D7A68C800113877 /* NetworkTool(网络工具) */,
 				2A80D2901D78FEF400FAE373 /* Channel(频道) */,
 				2A80D2931D78FEF400FAE373 /* Home(主页) */,
 				2A80D2971D78FEF400FAE373 /* News(新闻) */,
@@ -276,6 +280,16 @@
 				2A80D2D31D791B3900FAE373 /* topic_news.json */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2AD944C61D7A68C800113877 /* NetworkTool(网络工具) */ = {
+			isa = PBXGroup;
+			children = (
+				2AD944C71D7A692B00113877 /* NetworkTool.h */,
+				2AD944C81D7A692B00113877 /* NetworkTool.m */,
+			);
+			name = "NetworkTool(网络工具)";
+			path = Additions/NetworkTool;
 			sourceTree = "<group>";
 		};
 		C7715BA96ED7204A0EDB17C3 /* Frameworks */ = {
@@ -432,6 +446,7 @@
 				2A80D2CD1D7914DC00FAE373 /* UIButton+CZAddition.m in Sources */,
 				2A80D2C81D7914DC00FAE373 /* NSAttributedString+CZAdditon.m in Sources */,
 				2A80D2C71D7914DC00FAE373 /* NSArray+Log.m in Sources */,
+				2AD944C91D7A692B00113877 /* NetworkTool.m in Sources */,
 				2A80D2A91D79008900FAE373 /* HomeModel.m in Sources */,
 				2AD944C01D7A5DD200113877 /* NewsTableViewController.m in Sources */,
 				2A80D2D11D7914DC00FAE373 /* UIView+CZAddition.m in Sources */,

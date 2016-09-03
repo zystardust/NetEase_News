@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface HomeCollectionViewCell : UICollectionViewCell
-
+@property(copy,nonatomic)NSString *URLString;
 @end

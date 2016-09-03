@@ -9,13 +9,22 @@
 #import "HomeCollectionViewCell.h"
 #import "NewsTableViewController.h"
 #import "CZAdditions.h"
+@interface HomeCollectionViewCell()
+
+@property(strong,nonatomic)NewsTableViewController *newsVC;
+
+@end
 @implementation HomeCollectionViewCell
 -(void)awakeFromNib{
     UIStoryboard *newsStoryboard = [UIStoryboard storyboardWithName:@"News" bundle:nil];
-    NewsTableViewController *newsVC = [newsStoryboard instantiateInitialViewController];
-    [self.contentView addSubview:newsVC.tableView];
+    self.newsVC = [newsStoryboard instantiateInitialViewController];
+    [self.contentView addSubview:self.newsVC.tableView];
     
-    newsVC.tableView.frame = self.contentView.bounds;
-    newsVC.tableView.backgroundColor = [UIColor cz_randomColor];
+    self.newsVC.tableView.frame = self.contentView.bounds;
+    self.newsVC.tableView.backgroundColor = [UIColor cz_randomColor];
+}
+-(void)setURLString:(NSString *)URLString{
+    _URLString = URLString;
+    self.newsVC.URLString = URLString;
 }
 @end

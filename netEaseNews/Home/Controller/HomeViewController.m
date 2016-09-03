@@ -10,6 +10,7 @@
 #import "ChannelModel.h"
 #import "ChannelLabel.h"
 #import "CZAdditions.h"
+#import "HomeCollectionViewCell.h"
 @interface HomeViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property(weak,nonatomic)IBOutlet UIScrollView *channelScrollView;
 //newsCollectionView
@@ -57,7 +58,10 @@
     return self.channelArr.count;
 }
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HomeCollectionViewCell" forIndexPath:indexPath];
+    HomeCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HomeCollectionViewCell" forIndexPath:indexPath];
+    ChannelModel *model = self.channelArr[indexPath.item];
+    NSString *URLString = [NSString stringWithFormat:@"article/headline/%@/0-20.html",model.tid];
+    cell.URLString = URLString;
 //    cell.backgroundColor = [UIColor cz_randomColor];
     return cell;
 }
