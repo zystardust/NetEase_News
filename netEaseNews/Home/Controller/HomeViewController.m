@@ -9,8 +9,16 @@
 #import "HomeViewController.h"
 #import "ChannelModel.h"
 #import "ChannelLabel.h"
-@interface HomeViewController ()
+#import "CZAdditions.h"
+@interface HomeViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property(weak,nonatomic)IBOutlet UIScrollView *channelScrollView;
+//newsCollectionView
+@property(weak,nonatomic)IBOutlet UICollectionView *newsCollectionView;
+@property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *FlowLayout;
+
+
+
+@property(strong,nonatomic)NSArray *channelArr;
 @end
 
 @implementation HomeViewController
@@ -20,25 +28,38 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     [self createChannelLabel];
 }
+//设置CellSize
+-(void)viewDidAppear:(BOOL)animated{
+    //********
+    [super viewDidAppear:animated];
+    self.FlowLayout.itemSize = self.newsCollectionView.bounds.size;
+}
 // 创建频道标签和展示标签数据
 -(void)createChannelLabel{
-    NSArray *channelArr = [ChannelModel GetChannel];
+    self.channelArr = [ChannelModel GetChannel];
     CGFloat labelW = 80;
     CGFloat labelH = self.channelScrollView.bounds.size.height;
-    for (int i = 0; i < channelArr.count; i++) {
+    for (int i = 0; i < self.channelArr.count; i++) {
         ChannelLabel *label = [[ChannelLabel alloc]init];
         [self.channelScrollView addSubview:label];
         
         CGFloat labelX = labelW * i;
         label.frame = CGRectMake(labelX, 0, labelW, labelH);
         
-        self.channelScrollView.contentSize = CGSizeMake(labelW * channelArr.count, 0);
+        self.channelScrollView.contentSize = CGSizeMake(labelW * self.channelArr.count, 0);
         
-        ChannelModel *model = channelArr[i];
+        ChannelModel *model = self.channelArr[i];
         label.text = model.tname;
     };
-    
-    
+}
+//实现UICollectionViewDataSource方法
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return self.channelArr.count;
+}
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HomeCollectionViewCell" forIndexPath:indexPath];
+//    cell.backgroundColor = [UIColor cz_randomColor];
+    return cell;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

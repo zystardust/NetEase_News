@@ -10,7 +10,6 @@
 		2A80D29D1D78FF9F00FAE373 /* ChannelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A80D29C1D78FF9F00FAE373 /* ChannelModel.m */; };
 		2A80D2A31D79001500FAE373 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A80D2A21D79001500FAE373 /* HomeViewController.m */; };
 		2A80D2A91D79008900FAE373 /* HomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A80D2A81D79008900FAE373 /* HomeModel.m */; };
-		2A80D2AC1D7900B700FAE373 /* HomeCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A80D2AB1D7900B700FAE373 /* HomeCollectionView.m */; };
 		2A80D2C71D7914DC00FAE373 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A80D2B01D7914DC00FAE373 /* NSArray+Log.m */; };
 		2A80D2C81D7914DC00FAE373 /* NSAttributedString+CZAdditon.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A80D2B21D7914DC00FAE373 /* NSAttributedString+CZAdditon.m */; };
 		2A80D2C91D7914DC00FAE373 /* NSObject+CZRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A80D2B41D7914DC00FAE373 /* NSObject+CZRuntime.m */; };
@@ -30,6 +29,9 @@
 		2A83BE001D784EF60087BBD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A83BDFE1D784EF60087BBD3 /* Main.storyboard */; };
 		2A83BE021D784EF60087BBD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A83BE011D784EF60087BBD3 /* Assets.xcassets */; };
 		2A83BE051D784EF60087BBD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A83BE031D784EF60087BBD3 /* LaunchScreen.storyboard */; };
+		2AD944C01D7A5DD200113877 /* NewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AD944BF1D7A5DD200113877 /* NewsTableViewController.m */; };
+		2AD944C21D7A5DE800113877 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AD944C11D7A5DE800113877 /* News.storyboard */; };
+		2AD944C51D7A600400113877 /* HomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AD944C41D7A600400113877 /* HomeCollectionViewCell.m */; };
 		D5866AED465F6A6095802B9E /* libPods-netEaseNews.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D73A65D1D82A9E56CD59E110 /* libPods-netEaseNews.a */; };
 /* End PBXBuildFile section */
 
@@ -40,8 +42,6 @@
 		2A80D2A21D79001500FAE373 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		2A80D2A71D79008900FAE373 /* HomeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeModel.h; sourceTree = "<group>"; };
 		2A80D2A81D79008900FAE373 /* HomeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeModel.m; sourceTree = "<group>"; };
-		2A80D2AA1D7900B700FAE373 /* HomeCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCollectionView.h; sourceTree = "<group>"; };
-		2A80D2AB1D7900B700FAE373 /* HomeCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCollectionView.m; sourceTree = "<group>"; };
 		2A80D2AE1D7914DC00FAE373 /* CZAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZAdditions.h; sourceTree = "<group>"; };
 		2A80D2AF1D7914DC00FAE373 /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
 		2A80D2B01D7914DC00FAE373 /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
@@ -78,6 +78,11 @@
 		2A83BE011D784EF60087BBD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A83BE041D784EF60087BBD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A83BE061D784EF60087BBD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AD944BE1D7A5DD200113877 /* NewsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTableViewController.h; sourceTree = "<group>"; };
+		2AD944BF1D7A5DD200113877 /* NewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewController.m; sourceTree = "<group>"; };
+		2AD944C11D7A5DE800113877 /* News.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
+		2AD944C31D7A600400113877 /* HomeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCollectionViewCell.h; sourceTree = "<group>"; };
+		2AD944C41D7A600400113877 /* HomeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCollectionViewCell.m; sourceTree = "<group>"; };
 		AF2C5531F8C6057FAD4FFD77 /* Pods-netEaseNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-netEaseNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-netEaseNews/Pods-netEaseNews.release.xcconfig"; sourceTree = "<group>"; };
 		D73A65D1D82A9E56CD59E110 /* libPods-netEaseNews.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-netEaseNews.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8320015C3D2A1A3D607884D /* Pods-netEaseNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-netEaseNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-netEaseNews/Pods-netEaseNews.debug.xcconfig"; sourceTree = "<group>"; };
@@ -155,8 +160,8 @@
 		2A80D2961D78FEF400FAE373 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2A80D2AA1D7900B700FAE373 /* HomeCollectionView.h */,
-				2A80D2AB1D7900B700FAE373 /* HomeCollectionView.m */,
+				2AD944C31D7A600400113877 /* HomeCollectionViewCell.h */,
+				2AD944C41D7A600400113877 /* HomeCollectionViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -189,6 +194,9 @@
 		2A80D29A1D78FEF400FAE373 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				2AD944BE1D7A5DD200113877 /* NewsTableViewController.h */,
+				2AD944BF1D7A5DD200113877 /* NewsTableViewController.m */,
+				2AD944C11D7A5DE800113877 /* News.storyboard */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -349,6 +357,7 @@
 			files = (
 				2A83BE051D784EF60087BBD3 /* LaunchScreen.storyboard in Resources */,
 				2A83BE021D784EF60087BBD3 /* Assets.xcassets in Resources */,
+				2AD944C21D7A5DE800113877 /* News.storyboard in Resources */,
 				2A80D2D41D791B3900FAE373 /* topic_news.json in Resources */,
 				2A83BE001D784EF60087BBD3 /* Main.storyboard in Resources */,
 			);
@@ -420,14 +429,15 @@
 				2A80D2D21D7914DC00FAE373 /* UIViewController+CZAddition.m in Sources */,
 				2A80D2D01D7914DC00FAE373 /* UIScreen+CZAddition.m in Sources */,
 				2A80D2A31D79001500FAE373 /* HomeViewController.m in Sources */,
-				2A80D2AC1D7900B700FAE373 /* HomeCollectionView.m in Sources */,
 				2A80D2CD1D7914DC00FAE373 /* UIButton+CZAddition.m in Sources */,
 				2A80D2C81D7914DC00FAE373 /* NSAttributedString+CZAdditon.m in Sources */,
 				2A80D2C71D7914DC00FAE373 /* NSArray+Log.m in Sources */,
 				2A80D2A91D79008900FAE373 /* HomeModel.m in Sources */,
+				2AD944C01D7A5DD200113877 /* NewsTableViewController.m in Sources */,
 				2A80D2D11D7914DC00FAE373 /* UIView+CZAddition.m in Sources */,
 				2A80D2CC1D7914DC00FAE373 /* NSString+CZPath.m in Sources */,
 				2A83BDF71D784EF60087BBD3 /* main.m in Sources */,
+				2AD944C51D7A600400113877 /* HomeCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
