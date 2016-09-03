@@ -13,6 +13,8 @@
 @property(copy,nonatomic)NSString *imgsrc;
 @property(copy,nonatomic)NSString *source;
 @property(copy,nonatomic)NSString *replyCount;
+@property(copy,nonatomic)NSString *imgType;
+@property(copy,nonatomic)NSArray *imgextra;
 
 +(void)loadNewWithURLString:(NSString *)URLString successBlock:(void(^)(NSArray *newsList))successBlock failedBlock:(void(^)(NSError *error))failedBlock;
 

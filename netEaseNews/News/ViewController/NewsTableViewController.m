@@ -8,26 +8,24 @@
 
 #import "NewsTableViewController.h"
 #import "NewsModel.h"
+#import "NewsTableViewCell.h"
 @interface NewsTableViewController ()
-
+@property (nonatomic,strong) NSArray *newsList;
 @end
 
 @implementation NewsTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
+
 -(void)setURLString:(NSString *)URLString{
     _URLString = URLString;
 //    NSLog(@"URLString:%@",URLString);
     [NewsModel loadNewWithURLString:URLString successBlock:^(NSArray *newsList) {
-        NSLog(@"%@",newsList);
+//        NSLog(@"%@",newsList);
+        self.newsList = newsList;
+        [self.tableView reloadData];
     } failedBlock:^(NSError *error) {
         NSLog(@"%@",error);
     }];
@@ -39,25 +37,40 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+
+    return self.newsList.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    NewsModel *news = self.newsList[indexPath.row];
+    NSString *identifier;
+    if (news.imgType) {
+        identifier =@"BigCell";
+    }else if (news.imgextra.count == 2){
+        identifier =@"ImageCell";
+    }else{
+        identifier =@"BaseCell";
+    }
+    NewsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+    cell.news = news;
     return cell;
 }
-*/
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    NewsModel *news = self.newsList[indexPath.row];
+    CGFloat cellH;
+    if (news.imgType) {
+        cellH = 180;
+    }else if (news.imgextra.count == 2){
+        cellH = 130;
+    }else{
+        cellH = 80;
+    }
+    return cellH;
+}
 
 /*
 // Override to support conditional editing of the table view.

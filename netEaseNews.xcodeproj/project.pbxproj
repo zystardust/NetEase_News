@@ -30,6 +30,7 @@
 		2A83BE021D784EF60087BBD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A83BE011D784EF60087BBD3 /* Assets.xcassets */; };
 		2A83BE051D784EF60087BBD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A83BE031D784EF60087BBD3 /* LaunchScreen.storyboard */; };
 		2A9C4F6F1D7A9B0400DB6485 /* NewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9C4F6E1D7A9B0400DB6485 /* NewsModel.m */; };
+		2A9C4F721D7AA62A00DB6485 /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9C4F711D7AA62A00DB6485 /* NewsTableViewCell.m */; };
 		2AD944C01D7A5DD200113877 /* NewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AD944BF1D7A5DD200113877 /* NewsTableViewController.m */; };
 		2AD944C21D7A5DE800113877 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AD944C11D7A5DE800113877 /* News.storyboard */; };
 		2AD944C51D7A600400113877 /* HomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AD944C41D7A600400113877 /* HomeCollectionViewCell.m */; };
@@ -82,6 +83,8 @@
 		2A83BE061D784EF60087BBD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A9C4F6D1D7A9B0400DB6485 /* NewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsModel.h; sourceTree = "<group>"; };
 		2A9C4F6E1D7A9B0400DB6485 /* NewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsModel.m; sourceTree = "<group>"; };
+		2A9C4F701D7AA62A00DB6485 /* NewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTableViewCell.h; sourceTree = "<group>"; };
+		2A9C4F711D7AA62A00DB6485 /* NewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewCell.m; sourceTree = "<group>"; };
 		2AD944BE1D7A5DD200113877 /* NewsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTableViewController.h; sourceTree = "<group>"; };
 		2AD944BF1D7A5DD200113877 /* NewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewController.m; sourceTree = "<group>"; };
 		2AD944C11D7A5DE800113877 /* News.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
@@ -195,6 +198,8 @@
 		2A80D2991D78FEF400FAE373 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2A9C4F701D7AA62A00DB6485 /* NewsTableViewCell.h */,
+				2A9C4F711D7AA62A00DB6485 /* NewsTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -444,6 +449,7 @@
 				2A80D29D1D78FF9F00FAE373 /* ChannelModel.m in Sources */,
 				2A80D2CB1D7914DC00FAE373 /* NSString+CZHash.m in Sources */,
 				2A9C4F6F1D7A9B0400DB6485 /* NewsModel.m in Sources */,
+				2A9C4F721D7AA62A00DB6485 /* NewsTableViewCell.m in Sources */,
 				2A80D2CE1D7914DC00FAE373 /* UIColor+CZAddition.m in Sources */,
 				2A80D2C91D7914DC00FAE373 /* NSObject+CZRuntime.m in Sources */,
 				2A80D2D21D7914DC00FAE373 /* UIViewController+CZAddition.m in Sources */,
