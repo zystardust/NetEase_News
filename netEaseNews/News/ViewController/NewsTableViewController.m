@@ -7,7 +7,7 @@
 //
 
 #import "NewsTableViewController.h"
-
+#import "NewsModel.h"
 @interface NewsTableViewController ()
 
 @end
@@ -25,7 +25,12 @@
 }
 -(void)setURLString:(NSString *)URLString{
     _URLString = URLString;
-    NSLog(@"URLString:%@",URLString);
+//    NSLog(@"URLString:%@",URLString);
+    [NewsModel loadNewWithURLString:URLString successBlock:^(NSArray *newsList) {
+        NSLog(@"%@",newsList);
+    } failedBlock:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
