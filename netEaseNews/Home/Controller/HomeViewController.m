@@ -51,8 +51,29 @@
         
         ChannelModel *model = self.channelArr[i];
         label.text = model.tname;
+        
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(labelTapClick:)];
+        [label addGestureRecognizer:tap];
+        label.tag = i;
+        label.userInteractionEnabled = YES;
     };
 }
+-(void)labelTapClick :(UITapGestureRecognizer *)tap{
+    ChannelLabel *label = (ChannelLabel *)tap.view;
+    CGFloat labelOffsetX = label.center.x - (self.view.bounds.size.width * 0.5);
+    CGFloat minOffsetX = 0;
+    CGFloat maxOffsetX = self.channelScrollView.contentSize.width - self.view.bounds.size.width;
+    if (labelOffsetX < minOffsetX) {
+        labelOffsetX = 0;
+    }else if (labelOffsetX > maxOffsetX){
+        labelOffsetX = maxOffsetX;
+    }
+    [self.channelScrollView setContentOffset:CGPointMake(labelOffsetX, 0) animated:YES];
+    
+    NSIndexPath *indexPath = [NSIndexPath indexPathForItem:label.tag inSection:0];
+    [self.newsCollectionView scrollToItemAtIndexPath:indexPath atScrollPosition:0 animated:NO];
+}
+//频道标签的点击事件
 //实现UICollectionViewDataSource方法
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return self.channelArr.count;
